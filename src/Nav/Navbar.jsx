@@ -4,11 +4,13 @@ import Burger from "./Burger";
 
 const Nav = styled.nav`
   width: 100%;
-  height: 50px;
-  background-color: black;
-  padding: 0px 20px;
+  height: 68px;
+  background: transparent;
+  padding: 0px 15px;
+  margin: 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  top: 0;
 
   .logo {
     color: white;
@@ -21,7 +23,7 @@ const Nav = styled.nav`
     margin: 10px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 45px;
     font-weight: 800;
     flex-grow: 1;
   }
@@ -30,16 +32,35 @@ const Nav = styled.nav`
   }
   ul {
     list-style: none;
-    display: flex;
     flex-flow: row nowrap;
     text-decoration: none;
   }
   li {
-    padding: 18px 10px;
+    color: white;
+    font-size: 18px
+    background: red !important;
+    padding: 0.5vw;
+    width: 7vw;
+    font-weight: 500;
     font-family: Montserrat, sans-serif;
+    margin-left: 25px;
     text-decoration: none;
-    bacground-color: blueviolet;
+    transition: color 0.3s ease;
   }
+  li:hover{
+    color: white;
+    background-color: blueviolet;
+    padding: 8px 35px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid blueviolet;
+  }
+  .a-items {
+      background: lime;
+      width: 5vw;
+      margin: 0 auto;
+      
+    }
   #ikita {
     color: white;
   }
@@ -47,7 +68,7 @@ const Nav = styled.nav`
 
 const Navbar = () => {
   return (
-    <Nav>
+    <Nav className="navbar active">
       <div className="logo">
         <span>N</span>
         <span id="ikita">ikita</span>
